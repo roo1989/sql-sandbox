@@ -23,4 +23,8 @@ WHERE amount BETWEEN '2020-01-24 00:00' AND '2020-01-26 00:00';
 SELECT * FROM customer
 WHERE customer_id IN (123,212,323,243,353,432);
 
-SELECT * FROM film;
+SELECT * FROM film
+WHERE description LIKE '%Astounding%';
+
+SELECT DISTINCT COUNT(*) FROM film
+WHERE description LIKE '%Documentary%';
