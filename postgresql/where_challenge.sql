@@ -42,3 +42,20 @@ SELECT DISTINCT COUNT(*) FROM customer
 WHERE first_name LIKE '___'
 AND (last_name LIKE '%X'
 OR last_name LIKE '%Y');
+
+-- How many movies are there that contain 'Saga' in the description and where the title starts with either an 'A' or ends with 'R'
+-- Use the alias 'no_of_movies'
+SELECT DISTINCT COUNT(*) AS no_of_movies FROM film
+WHERE description LIKE '%Saga%'
+AND (title LIKE 'A%' OR title LIKE '%R');
+
+-- Create a list of all customers where the first name contains 'ER' and has an 'A' as the second letter.
+-- Order the results by the last name descending
+SELECT * FROM customer
+WHERE first_name LIKE '_A%'
+AND (first_name LIKE '%ER%')
+ORDER BY last_name DESC;
+
+-- How many payments are there where the amount is either 0 or is between 3.99 and 7.99 and in the same time has happened on 2020-05-01
+SELECT * FROM payment
+WHERE payment_date BETWEEN '2020-05-01' AND '2020-05-31';
