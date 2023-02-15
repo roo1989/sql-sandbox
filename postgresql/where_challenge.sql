@@ -58,4 +58,4 @@ ORDER BY last_name DESC;
 
 -- How many payments are there where the amount is either 0 or is between 3.99 and 7.99 and in the same time has happened on 2020-05-01
 SELECT * FROM payment
-WHERE payment_date BETWEEN '2020-05-01' AND '2020-05-31';
+WHERE payment_date BETWEEN '2020-05-01' AND '2020-05-02';
