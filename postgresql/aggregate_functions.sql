@@ -19,3 +19,10 @@ SELECT
     ROUND(AVG(amount), 2)
 FROM
     payment;
+
+-- Group by.
+SELECT customer_id, SUM(amount)
+FROM payment
+WHERE customer_id > 3
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC;
