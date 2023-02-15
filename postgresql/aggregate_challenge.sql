@@ -14,3 +14,32 @@
      SUM(replacement_cost)
 FROM
     film;
+
+
+/**
+  Challenge 2.
+
+    2.1. Find which of the two employees (staff_id) is responsible for more payments.
+
+    2.2. Which of the two staff is responsible for a higher overall payment amount?
+
+    2.3. How do these amounts change if we don't consider amounts equal to 0?
+ */
+-- 2.1
+ SELECT
+     staff_id,
+     COUNT(amount)
+FROM
+    payment
+WHERE amount != 0
+GROUP BY staff_id
+ORDER BY COUNT(amount) DESC;
+
+-- 2.2
+ SELECT
+     staff_id,
+     SUM(amount)
+FROM
+    payment
+GROUP BY staff_id
+ORDER BY SUM(amount) DESC;
