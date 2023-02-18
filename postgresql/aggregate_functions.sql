@@ -26,3 +26,13 @@ FROM payment
 WHERE customer_id > 3
 GROUP BY customer_id
 ORDER BY SUM(amount) DESC;
+
+-- Use date to select only the date from a timestamp.
+SELECT DATE(payment_date)
+FROM payment;
+
+-- Use date to select only the date from a timestamp + all other columns
+SELECT *,
+       DATE(payment_date)
+FROM payment;
+
