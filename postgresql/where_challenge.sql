@@ -59,3 +59,8 @@ ORDER BY last_name DESC;
 -- How many payments are there where the amount is either 0 or is between 3.99 and 7.99 and in the same time has happened on 2020-05-01
 SELECT * FROM payment
 WHERE payment_date BETWEEN '2020-05-01' AND '2020-05-02';
+
+-- Which employee had the highest sales amount in a single day.
+SELECT staff_id, amount
+FROM payment
+ORDER BY amount DESC;
