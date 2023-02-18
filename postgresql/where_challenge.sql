@@ -61,6 +61,19 @@ SELECT * FROM payment
 WHERE payment_date BETWEEN '2020-05-01' AND '2020-05-02';
 
 -- Which employee had the highest sales amount in a single day.
-SELECT staff_id, amount
+SELECT staff_id,
+DATE(payment_date),
+COUNT(*)
 FROM payment
-ORDER BY amount DESC;
+GROUP BY staff_id, DATE(payment_date)
+ORDER BY SUM(amount) DESC;
+
+-- Which employee had the highest sales amount in a single day.
+SELECT staff_id,
+SUM(amount),
+DATE(payment_date),
+COUNT(*)
+FROM payment
+WHERE amount != 0
+GROUP BY staff_id, DATE(payment_date)
+ORDER BY COUNT(amount) DESC;
