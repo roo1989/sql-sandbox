@@ -1,7 +1,7 @@
 /**
   Challenge 1.
 
-  Find the Minimum, Maximum, Average (rounded) and the Sum oof the replacement
+  1. Find the Minimum, Maximum, Average (rounded) and the Sum oof the replacement
   cost of the films
  */
 
@@ -10,7 +10,7 @@
      MAX(replacement_cost),
      ROUND(
          AVG(replacement_cost), 2
-         ) AS average ,
+         ) AS average,
      SUM(replacement_cost)
 FROM
     film;
@@ -20,11 +20,10 @@ FROM
   Challenge 2.
 
     2.1. Find which of the two employees (staff_id) is responsible for more payments.
-
     2.2. Which of the two staff is responsible for a higher overall payment amount?
-
     2.3. How do these amounts change if we don't consider amounts equal to 0?
  */
+
 -- 2.1
  SELECT
      staff_id,
@@ -43,3 +42,5 @@ FROM
     payment
 GROUP BY staff_id
 ORDER BY SUM(amount) DESC;
+
+
