@@ -78,3 +78,4 @@ FROM payment
 WHERE amount != 0
 GROUP BY staff_id, DATE(payment_date)
 ORDER BY COUNT(amount) DESC;
+
