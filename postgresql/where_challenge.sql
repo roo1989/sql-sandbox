@@ -3,6 +3,7 @@ SELECT COUNT(*)
 FROM payment
 WHERE customer_id = 100;
 
+
 -- Find out the last names of customers with first name ERICA.
 SELECT last_name
 FROM CUSTOMER
