@@ -43,3 +43,6 @@ SELECT
 FROM payment
 GROUP BY customer_id
 HAVING SUM(amount) > 200;
+
+SELECT * FROM payment
+LIMIT 10;
