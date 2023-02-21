@@ -48,3 +48,7 @@ SELECT * FROM payment
 LIMIT 10;
 
 SELECT * FROM city LIMIT 10;
+
+SELECT *
+FROM actor
+LIMIT 10;
