@@ -46,3 +46,5 @@ HAVING SUM(amount) > 200;
 
 SELECT * FROM payment
 LIMIT 10;
+
+SELECT * FROM city LIMIT 10;
