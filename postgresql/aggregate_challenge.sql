@@ -44,3 +44,12 @@ GROUP BY staff_id
 ORDER BY SUM(amount) DESC;
 
 
+SELECT
+    customer_id,
+    DATE(payment_date),
+    ROUND(AVG(amount),2) AS avg_amount,
+    COUNT(*)
+FROM payment
+WHERE payment_date IN ('2020-04-28', '2020-04-29', '2020-04-30')
+GROUP BY customer_id, DATE(payment_date)
+ORDER BY 3 DESC;
