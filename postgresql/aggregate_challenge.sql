@@ -44,6 +44,11 @@ GROUP BY staff_id
 ORDER BY SUM(amount) DESC;
 
 
+/**
+  Challenge 3.
+ */
+
+ -- 3.1
 SELECT
     customer_id,
     DATE(payment_date),
