@@ -16,3 +16,21 @@
 FROM customer
 WHERE LENGTH(first_name) > 10
 OR LENGTH(last_name) > 10;
+
+/**
+  Challenge 2.
+
+  2.1. Extract the last 5 characters of the email address first.
+
+  2.2. Extract the . from .org postfix in the email address.
+ */
+
+-- 2.1
+ SELECT
+     RIGHT(email, 5)
+FROM customer;
+
+--2.2
+SELECT
+     LEFT(RIGHT(email, 4),1)
+FROM customer;
