@@ -15,3 +15,21 @@ SELECT
     LOWER(email) as email_address,
     LENGTH(email) as email_length
 FROM customer;
+
+-- Extract the first two letters from the first_name from the customers table.
+SELECT
+    LEFT(first_name, 2) as first_name_shortened,
+    first_name
+FROM customer;
+
+-- Extract the last two letters from the last_name from the customers table.
+SELECT
+    RIGHT(last_name, 2) as last_name_shortened,
+    last_name
+FROM customer;
+
+-- Extract the first third letter in the first_name using nested LEFT/RIGHT functions.
+SELECT
+    RIGHT(LEFT(first_name, 2),1),
+    first_name
+FROM customer;
