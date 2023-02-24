@@ -43,3 +43,9 @@ FROM customer;
 SELECT
     LEFT(first_name, 1) || '.' || LEFT(last_name, 1) || '.' AS initials
 FROM customer;
+
+-- Let's find the position of the '@' sign in the email column of the customer table.
+SELECT
+    POSITION('@' IN email),
+    LOWER(email)
+FROM customer;
