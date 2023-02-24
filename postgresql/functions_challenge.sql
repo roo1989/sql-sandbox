@@ -34,3 +34,15 @@ FROM customer;
 SELECT
      LEFT(RIGHT(email, 4),1)
 FROM customer;
+
+/**
+  Challenge 3.
+
+  Anonymize the email addresses.
+  Starting with the first letter of the email address, followed
+  with three (3) stars (*) and then @email.com
+ */
+
+ SELECT
+     LEFT(email, 1) || '***' || RIGHT(email, 19)
+FROM customer;
