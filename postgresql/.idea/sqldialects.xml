@@ -6,6 +6,9 @@
     <file url="file://$PROJECT_DIR$/challenges_day_one.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/distinct.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/distinct_challenge.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/flight_database.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/functions.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/functions_challenge.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/order_by.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/order_by_challenge.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/pagila-insert-data.sql" dialect="PostgreSQL" />
