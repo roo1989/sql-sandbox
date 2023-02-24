@@ -33,3 +33,13 @@ SELECT
     RIGHT(LEFT(first_name, 2),1),
     first_name
 FROM customer;
+
+-- Concat first letter of first_name and last_name
+SELECT
+    LEFT(first_name, 1) || LEFT(last_name, 1) AS abbreviation
+FROM customer;
+
+-- Concat first letter of first_name and last_name with a dot (.) inbetween
+SELECT
+    LEFT(first_name, 1) || '.' || LEFT(last_name, 1) || '.' AS initials
+FROM customer;
