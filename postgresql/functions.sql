@@ -52,5 +52,5 @@ FROM customer;
 
 -- Substring example
 SELECT
-    SUBSTRING(email FROM POSITION('.' IN email) FOR 3)
+    SUBSTRING(email FROM POSITION('.' IN email)+1 FOR LENGTH(last_name))
 FROM customer;
