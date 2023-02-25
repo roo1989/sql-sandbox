@@ -54,3 +54,7 @@ FROM customer;
 SELECT
     SUBSTRING(email FROM POSITION('.' IN email)+1 FOR LENGTH(last_name))
 FROM customer;
+
+-- Rentals
+SELECT
+    EXTRACT(rental_date)
