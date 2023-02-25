@@ -49,3 +49,8 @@ SELECT
     POSITION('@' IN email),
     LOWER(email)
 FROM customer;
+
+-- Substring example
+SELECT
+    SUBSTRING(email FROM POSITION('.' IN email) FOR 3)
+FROM customer;
