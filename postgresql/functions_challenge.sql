@@ -61,3 +61,29 @@ FROM customer;
 SELECT
     last_name || ', ' || LEFT(email,POSITION('.' IN email)-1) AS name
 FROM customer;
+
+/**
+  Challenge 4 - Substring.
+
+  4.1 Create an anonymized form of the email addresses in the following way: M***.S***@sakilcustomer.org
+
+  4.2 Create an anonymized form of the email address with the last letter of the first name,
+  and the first letter of the last name followed with the @ sign and domain name.
+ */
+
+-- 4.1
+SELECT
+     email,
+     LEFT(email,1) ||
+     '***' ||
+     SUBSTRING(email FROM POSITION('.' IN email) FOR 2) ||
+     '***' || SUBSTRING(email FROM POSITION('@' IN email))
+FROM customer;
+
+-- 4.2
+SELECT
+    '***'
+|| SUBSTRING(email FROM POSITION('.' IN email)-1 for 3)
+|| '***'
+|| SUBSTRING(email FROM POSITION('@' IN email))
+FROM customer;
