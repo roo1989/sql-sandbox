@@ -52,3 +52,6 @@ SELECT * FROM city LIMIT 10;
 SELECT *
 FROM actor
 LIMIT 10;
+
+
+
