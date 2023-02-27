@@ -57,4 +57,15 @@ FROM customer;
 
 -- Rentals
 SELECT
-    EXTRACT(rental_date)
+    EXTRACT(day from rental_date)
+FROM rental;
+
+
+-- Get the day with the most sales
+SELECT
+    EXTRACT(day from rental_date),
+    COUNT(*)
+FROM rental
+GROUP BY EXTRACT(day from rental_date)
+ORDER BY COUNT(*) DESC
+LIMIT 1;
