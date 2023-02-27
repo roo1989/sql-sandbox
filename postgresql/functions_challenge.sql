@@ -87,3 +87,30 @@ SELECT
 || '***'
 || SUBSTRING(email FROM POSITION('@' IN email))
 FROM customer;
+
+
+/**
+  Challenge 5.
+
+  5.1. What's the month with the highest total payment amount.
+
+  5.2. What's the day of week with the highest total payment amount? (0) is sunday.
+
+  5.3 What's the highest amount one customer has spent in a week.
+ */
+
+-- 5.1
+SELECT
+    EXTRACT(month from payment_date),
+    SUM(amount)
+FROM payment
+GROUP BY EXTRACT(month from payment_date)
+ORDER BY SUM(amount) DESC;
+
+
+SELECT
+    EXTRACT(day from payment_date),
+    SUM(amount)
+FROM payment
+GROUP BY EXTRACT(day from payment_date)
+ORDER BY SUM(amount) DESC;
